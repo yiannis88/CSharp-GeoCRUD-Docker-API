@@ -1,0 +1,6 @@
+@csharp_geocrud_docker_api_HostAddress = http://localhost:5268
+
+GET {{csharp_geocrud_docker_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

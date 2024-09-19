@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Map</title>
+    <!-- Include OpenLayers CSS -->
+    <link rel="stylesheet" href="styles/ol.css" />
+    <!-- Include Layer Switcher CSS -->
+    <link rel="stylesheet" href="styles/ol-layerswitcher.css" />
+    <link rel="stylesheet" href="styles/ol-popup.css" />
+    <style>
+        #map { height: 500px; width: 100%; position: relative; }
+        .search-control {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            padding: 5px;
+            z-index: 1000;
+        }
+        .controls {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .dropdowns {
+            display: flex;
+            gap: 20px;
+        }
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .control-group label {
+            margin-bottom: 5px;
+        }
+        .control-group select {
+            margin-bottom: 10px;
+        }
+        .radio-group {
+            margin-bottom: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .radio-group label {
+            margin: 0;
+        }
+        .submit-btn {
+            align-self: flex-start;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .record-count {
+            margin-left: 10px;
+            font-size: 16px;
+            line-height: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map">
+        <div class="search-control">
+            <input id="search" type="text" placeholder="Search for a city..." />
+        </div>
+    </div>
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+    <div class="controls">
+        <div class="dropdowns">
+            <div class="control-group">
+                <label for="colour">Select Colour:</label>
+                <select id="colour">
+                    <option value="%23808080">Grey</option>
+                    <option value="%23FF0000">Red</option>
+                    <option value="%23008000">Green</option>
+                </select>
+            </div>
+        </div>
+        <button class="submit-btn" id="submit">Submit</button>
+        <span id="recordCount" class="record-count">Records: 0</span>
+    </div>
+    <!-- Include OpenLayers JS -->
+    <script src="scripts/ol.js"></script>
+    <!-- Include Layer Switcher JS -->
+    <script src="scripts/ol-layerswitcher.js"></script>
+    <script src="scripts/marker-helper.js"></script>
+    <script src="scripts/map.js"></script>
+</body>
+</html>
