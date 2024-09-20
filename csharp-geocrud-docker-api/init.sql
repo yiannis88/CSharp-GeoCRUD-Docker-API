@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS geo (
+    id SERIAL PRIMARY KEY,
+    timestamp VARCHAR(255) NOT NULL,
+    latitude DECIMAL(12, 9) NOT NULL,
+    longitude DECIMAL(12, 9) NOT NULL,
+    colour VARCHAR(255) NOT NULL
+);

@@ -32,7 +32,7 @@ This application serves as a demonstration of a CRUD API with integrated geospat
     * To add data, issue a `POST` request to `http://localhost:9876/api/geo` with the `Content-Type` set to `application/json`. The request body should be in the following format:
     ```
     {
-        "TimeStamp": STING,
+        "TimeStamp": STRING,
         "Latitude": NUMERICAL,
         "Longitude": NUMERICAL,
         "Colour": STRING
